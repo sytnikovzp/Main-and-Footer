@@ -4,6 +4,7 @@
   width: 100%;
   display: flex;
   background-color: #333;
+  z-index: 1;
 }
 
 .img-header {

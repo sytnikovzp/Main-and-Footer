@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from './components/Header/Header';
+import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
 import './components/Header/Header.css';
+import './components/Main/Main.css';
 import './components/Footer/Footer.css';
 
 class App extends React.Component {
@@ -10,6 +12,18 @@ class App extends React.Component {
       'Терминатор 2: Судный день',
       'Назад в будущее',
       'Звездные войны: Возвращение Джедая',
+    ],
+    actors: [
+      'Майкл Дж. Фокс',
+      'Кристофер Ллойд',
+      'Лиа Томпсон',
+      'Криспин Гловер',
+      'Томас Ф. Уилсон',
+      'Клаудия Уэллс',
+      'Марк МакКлюр',
+      'Уэнди Джо Спербер',
+      'Джордж ДиЧенцо',
+      'Фрэнсис Ли МакКейн',
     ],
     movieStudio: [
       'г. Киев ул. Закревского, 22',
@@ -22,6 +36,7 @@ class App extends React.Component {
     return (
       <>
         <Header movies={this.state.movies} />
+        <Main actors={this.state.actors} />
         <Footer movieStudio={this.state.movieStudio} />
       </>
     );

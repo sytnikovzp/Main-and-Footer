@@ -11,7 +11,7 @@ export class Footer extends Component {
               <i className='fa fa-location-arrow' aria-hidden='true'></i>
             </div>
             <div className='text-footer'>
-              <span>Адрес киностудии:</span>
+              <span>Адрес киностудии</span>
               <p>
                 <a href='https://maps.app.goo.gl/c8b7NSXnsYFPatBZ9'>
                   {movieStudio[0]}
