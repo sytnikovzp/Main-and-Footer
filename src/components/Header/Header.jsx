@@ -2,18 +2,26 @@ import { Component } from 'react';
 
 export class Header extends Component {
   render() {
-    console.log(this.props);
-    const count = this.props.count;
     const movies = this.props.movies;
     return (
       <>
-        <h2>Header</h2>
-        <p>{count}</p>
-        <ul>
-          {movies.map((movie) => {
-            return <li key={movie}>{movie}</li>;
-          })}
-        </ul>
+        <div id='header'>
+          <div className='img-header'>
+            <i className='fa fa-film' aria-hidden='true'></i>
+          </div>
+          <h2>Сегодня в прокате:</h2>
+          <ul>
+            <li>
+              {movies.map((movie) => {
+                return (
+                  <a href='#' key={movie}>
+                    {movie}
+                  </a>
+                );
+              })}
+            </li>
+          </ul>
+        </div>
       </>
     );
   }

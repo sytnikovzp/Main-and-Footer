@@ -1,36 +1,28 @@
 import React from 'react';
 import Header from './components/Header/Header';
-// import './App.css';
+import Footer from './components/Footer/Footer';
+import './components/Header/Header.css';
+import './components/Footer/Footer.css';
 
 class App extends React.Component {
   state = {
-    count: 0,
-    movies: ['Gladiator', 'Harry Potter', 'Lord of the rings'],
+    movies: [
+      'Терминатор 2: Судный день',
+      'Назад в будущее',
+      'Звездные войны: Возвращение Джедая',
+    ],
+    movieStudio: [
+      'г. Киев ул. Закревского, 22',
+      'faculty@film.ua',
+      '+38 044 459 46 10',
+    ],
   };
 
   render() {
     return (
       <>
-        <Header count={this.state.count} movies={this.state.movies} />
-
-        <div className='card'>
-          <button
-            onClick={() =>
-              this.setState({
-                count: this.state.count + 1,
-              })
-            }
-          >
-            count is {this.state.count}
-          </button>
-
-          <p>
-            Edit <code>src/App.jsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className='read-the-docs'>
-          Click on the Vite and React logos to learn more
-        </p>
+        <Header movies={this.state.movies} />
+        <Footer movieStudio={this.state.movieStudio} />
       </>
     );
   }
