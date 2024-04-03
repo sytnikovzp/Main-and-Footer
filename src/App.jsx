@@ -2,9 +2,6 @@ import React from 'react';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
-import './components/Header/Header.css';
-import './components/Main/Main.css';
-import './components/Footer/Footer.css';
 
 class App extends React.Component {
   state = {
